@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会員登録フォーム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 会員登録フォーム -->
+  <div class="Form" id="register-form">
+    <form id="registrationForm">
+      <div class="Form-Item">
+        <label for="name" class="Form-Item-Label">会員名 <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="name" name="name" maxlength="30" required placeholder="例: 山田 太郎" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="furigana" class="Form-Item-Label">フリガナ <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="furigana" name="furigana" maxlength="30" required placeholder="例: ヤマダ タロウ" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="email" class="Form-Item-Label">メールアドレス <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="email" id="email" name="email" required placeholder="例: example@example.com" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="password" class="Form-Item-Label">パスワード <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="password" id="password" name="password" minlength="8" required placeholder="8文字以上のパスワード" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="phone" class="Form-Item-Label">電話番号 <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="phone" name="phone" pattern="\d*" required placeholder="例: 09012345678" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="postcode" class="Form-Item-Label">郵便番号 <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="postcode" name="postcode" pattern="\d*" required placeholder="例: 1234567" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="prefecture" class="Form-Item-Label">都道府県 <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="prefecture" name="prefecture" required placeholder="例: 東京都" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="city" class="Form-Item-Label">市区町村 <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="city" name="city" maxlength="30" required placeholder="例: 渋谷区" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="address" class="Form-Item-Label">番地・アパート名 <span class="Form-Item-Label-Required">必須</span></label>
+        <input type="text" id="address" name="address" maxlength="50" required placeholder="例: 1-2-3 〇〇マンション101" class="Form-Item-Input">
+      </div>
+      <div class="Form-Item">
+        <label for="remarks" class="Form-Item-Label">備考欄</label>
+        <textarea id="remarks" name="remarks" maxlength="255" placeholder="任意" class="Form-Item-Textarea"></textarea>
+      </div>
+      <input type="submit" value="登録する" class="Form-Btn">
+    </form>
+  </div>
+
+  <!-- 登録確認ページ -->
+  <div class="Form hidden" id="register-confirmation">
+    <div class="Form-Item">
+      <p class="Form-Item-Label">会員名: <span id="confirm-name"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">フリガナ: <span id="confirm-furigana"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">メールアドレス: <span id="confirm-email"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">電話番号: <span id="confirm-phone"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">郵便番号: <span id="confirm-postcode"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">都道府県: <span id="confirm-prefecture"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">市区町村: <span id="confirm-city"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">番地・アパート名: <span id="confirm-address"></span></p>
+    </div>
+    <div class="Form-Item">
+      <p class="Form-Item-Label">備考欄: <span id="confirm-remarks"></span></p>
+    </div>
+    <button type="button" class="Form-Btn" id="back-btn">戻る</button>
+    <button type="button" class="Form-Btn" id="register-btn">登録</button>
+  </div>
+
+  <!-- 登録完了ページ -->
+  <div class="Form hidden" id="register-complete">
+    <div class="Form-Item">
+      <p class="Form-Item-Label">登録が完了しました。</p>
+    </div>
+    <button type="button" class="Form-Btn" id="home-btn">トップページに戻る</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
