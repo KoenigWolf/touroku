@@ -1,0 +1,80 @@
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* エラーメッセージ */
+.Form-Error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 24px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* フォーム全体のエラー状態 */
+.Form-Error-State {
+  border-color: #d9534f;
+}
+
+/* 表示・非表示 */
+.hidden {
+  display: none !important;
+}
+
+/* フレックスボックスユーティリティ */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* マージンユーティリティ */
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* パディングユーティリティ */
+.p-4 {
+  padding: 1rem;
+}
+
+/* テキストユーティリティ */
+.text-center {
+  text-align: center;
+}
+
+.text-error {
+  color: #d9534f;
+}
+
+.text-success {
+  color: #28a745;
+}

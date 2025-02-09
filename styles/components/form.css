@@ -1,0 +1,180 @@
+/* コンテナのスタイル */
+.container {
+  padding-bottom: 80px;
+}
+
+/* フォームのベーススタイル */
+.Form {
+  margin: 80px auto;
+  max-width: 720px;
+}
+
+/* フォームアイテムのスタイル */
+.Form-Item {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #5bc8ac;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* フォーム入力フィールド */
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 8px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.Form-Item-Input:focus {
+  outline: none;
+  border-color: #5bc8ac;
+  background: #fff;
+}
+
+.Form-Item-Input.error {
+  border-color: #d9534f;
+  background: #fff;
+}
+
+/* テキストエリア */
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 8px;
+  padding: 1em;
+  height: 216px;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.Form-Item-Textarea:focus {
+  outline: none;
+  border-color: #5bc8ac;
+  background: #fff;
+}
+
+/* バリデーションメッセージ */
+.Form-Validation-Message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 8px;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+/* エラーとサクセスメッセージ */
+.Form-Error, .Form-Success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out;
+}
+
+.Form-Error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.Form-Success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 480px) {
+  .container {
+    padding-bottom: 40px;
+  }
+
+  .Form {
+    margin: 40px auto;
+  }
+
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+
+  .Form-Item-Input {
+    margin-top: 18px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    height: 200px;
+    font-size: 15px;
+  }
+}
